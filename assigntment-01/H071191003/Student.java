@@ -128,11 +128,10 @@ public class Student{
         String output = nameComponents[nameComponents.length -1];
         
         //takes first letter of each name component except the last name
-        if (nameComponents.length > 1) {
-            for (int i = 0; i < nameComponents.length-1; i++) {
-                output += nameComponents[i].charAt(0);
-            }
+        for (int i = 0; i < nameComponents.length-1; i++) {
+            output += nameComponents[i].charAt(0);
         }
+        
 
         //adds university domain to email address
         output += getLastTwoDigits(registerYear)+ facultyMap.get(faculty) + "@student.unhas.ac.id";
