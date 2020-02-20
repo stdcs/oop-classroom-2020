@@ -39,7 +39,7 @@ public class Student{
         for (int i = 0; i < fullName.length -1;i++) {
             Name+= fullName[i].substring(0,1);
         }
-        this.email = (fullName[fullName.length - 1]+ Name + String.valueOf(registerYear).substring(2) + facultyMap.get(faculty) + "@gmail.com").toLowerCase();
+        this.email = (fullName[fullName.length - 1]+ Name + String.valueOf(registerYear).substring(2) + facultyMap.get(faculty) + "@student.unhas.ac.id").toLowerCase();
     }
     public String getEmail(String email){
         return email;
