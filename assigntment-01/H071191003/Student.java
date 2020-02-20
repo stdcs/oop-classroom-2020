@@ -42,7 +42,7 @@ public class Student{
         //returns an empty string if str has an length of 0
         try{
             newStr = String.valueOf((char) (Character.isLowerCase(str.charAt(0)) ? str.charAt(0)-32 
-                                                                                    : str.charAt(0)));
+                                                                                 : str.charAt(0)));
         }catch (IndexOutOfBoundsException e){
             return "";
         }
@@ -59,12 +59,12 @@ public class Student{
                  * capitalised character at index i of the string str
                  */
                 newStr += " " + (char) (Character.isLowerCase(str.charAt(i)) ? str.charAt(i) - 32
-                                                                            : str.charAt(i)) ;
+                                                                             : str.charAt(i)) ;
             } else {
                 
                 //adds the decapitalised character at index i of the string str 
                 newStr += (char) (Character.isUpperCase(str.charAt(i)) ? str.charAt(i) + 32 
-                                                                        : str.charAt(i));
+                                                                       : str.charAt(i));
             }
         }
         return newStr;
@@ -101,12 +101,12 @@ public class Student{
     /*
         * Generates a student id with the following format:         
         * 
-        * [faculty code][major code]1[last 2 digits of registry year]10
-        *  [random number ranging from 0 to 60]
+        * [faculty code][major code]1[last 2 digits of registry year]1
+        *  [random number ranging from 0 to 60 (3 digits with a leading zero)]
         */
     public void setId(Map<String, String> facultyMap, Map<String, String> majorMap) {
-        id = facultyMap.get(faculty) + majorMap.get(major) + 1 + getLastTwoDigits(registerYear) + 10 
-                + String.format("%02d", ThreadLocalRandom.current().nextInt(0, 61));
+        id = String.format("%s%s1%s1%03d", facultyMap.get(faculty), majorMap.get(major), getLastTwoDigits(registerYear)
+                , ThreadLocalRandom.current().nextInt(0, 61));
     }
 
     public String getId() {
