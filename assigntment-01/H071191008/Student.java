@@ -5,16 +5,16 @@ import java.util.Random;
 
 public class Student {
 
+    int registerYear;
     String id;
     String firstName;
     String lastName;
     String email;
-    int registerYear;
     String faculty;
     String department;
     String major;
+    String fullName;
     String nameSplit[];
-    String fullName = "";
 
     public String getEmail() {
         return email;
@@ -49,6 +49,7 @@ public class Student {
     }
 
     public String getFullName() {
+        fullName = "";
         for (int i = 0; i < nameSplit.length; i++) {
             if (i == nameSplit.length - 1) {
                 fullName += nameSplit[i].substring(0, 1).toUpperCase() + nameSplit[i].substring(1).toLowerCase();
@@ -64,7 +65,7 @@ public class Student {
         for (int i = 0; i < nameSplit.length - 1; i++) {
             email += Character.toLowerCase(nameSplit[i].charAt(0));
         }
-        email += registerYear % 100 + facultyMap.get(faculty)+"@student.unhas.ac.id";
+        email += registerYear % 100 + facultyMap.get(faculty).toLowerCase()+"@student.unhas.ac.id";
     }
 
     public void setId(Map<String, String> facultyMap, Map<String, String> majorMap) {
