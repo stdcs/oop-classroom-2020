@@ -105,8 +105,8 @@ public class Student{
         *  [random number ranging from 0 to 60 (3 digits with a leading zero)]
         */
     public void setId(Map<String, String> facultyMap, Map<String, String> majorMap) {
-        id = String.format("%s%s1%s1%03d", facultyMap.get(faculty), majorMap.get(major), getLastTwoDigits(registerYear)
-                , ThreadLocalRandom.current().nextInt(1, 61));
+        id = String.format("%s%s1%s1%03d", facultyMap.get(faculty), majorMap.get(major),
+         getLastTwoDigits(registerYear), ThreadLocalRandom.current().nextInt(1, 61));
     }
 
     public String getId() {
@@ -158,6 +158,7 @@ public class Student{
     //Grabs the last two digits of an integer
     private String getLastTwoDigits(int number) {
         String output = "00" + String.valueOf(number);
-        return String.format("%c%c", output.charAt(output.length() - 2), output.charAt(output.length() - 1));
+        return String.format("%c%c", output.charAt(output.length() - 2)
+                                   , output.charAt(output.length() - 1));
     }
 }
