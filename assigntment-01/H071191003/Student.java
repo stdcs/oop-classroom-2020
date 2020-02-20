@@ -106,7 +106,7 @@ public class Student{
         */
     public void setId(Map<String, String> facultyMap, Map<String, String> majorMap) {
         id = String.format("%s%s1%s1%03d", facultyMap.get(faculty), majorMap.get(major), getLastTwoDigits(registerYear)
-                , ThreadLocalRandom.current().nextInt(0, 61));
+                , ThreadLocalRandom.current().nextInt(1, 61));
     }
 
     public String getId() {
