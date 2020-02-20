@@ -102,7 +102,7 @@ public class Student{
         * Generates a student id with the following format:         
         * 
         * [faculty code][major code]1[last 2 digits of registry year]1
-        *  [random number ranging from 0 to 60 (3 digits with a leading zero)]
+        *  [random number ranging from 1 to 60 (3 digits with a leading zero)]
         */
     public void setId(Map<String, String> facultyMap, Map<String, String> majorMap) {
         id = String.format("%s%s1%s1%03d", facultyMap.get(faculty), majorMap.get(major),
