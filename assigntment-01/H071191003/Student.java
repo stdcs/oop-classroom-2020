@@ -152,7 +152,7 @@ public class Student{
         System.out.printf("Email Mahasiswa\t : %s\n", email);
         System.out.printf("Fakultas\t : %s\n", faculty);
         System.out.printf("Departemen\t : %s\n", department);
-        System.out.printf("Program Studi\t : %s\n", major);
+        System.out.printf("Program Studi\t : %s\n\n", major);
     }
     
     //Grabs the last two digits of an integer
