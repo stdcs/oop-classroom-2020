@@ -92,27 +92,7 @@ class Student {
       email += registerYear % 100 + facultyMap.get(getFaculty()) + "@student.unhas.ac.id";
       email = email.toLowerCase(); 
    }
-
-   // public void camelCase1() {
-   //    char first = firstName.charAt(0);
-   //    if(first == 'm') {
-   //       this.firstName = "Muhammad";
-   //    }
-   //    char last = lastName.charAt(0);
-   //    if(last == 'a') {
-   //       this.lastName = "Adrian";
-   //    }
-   // }
-   // public void camelCase2() {
-   //    char first = firstName.charAt(0);
-   //    if(first == 'a') {
-   //       this.firstName = "Andi";
-   //    }
-   //    char last = lastName.charAt(0);
-   //    if(last == 'i') {
-   //       this.lastName = "Ilhamsyah Idris";
-   //    }
-   // }
+   
    public String getName() {
       
       return this.name;
