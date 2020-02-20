@@ -1,8 +1,11 @@
 package TugasOOP1;
+import java.util.Scanner;
 import java.util.HashMap;
+import java.util.InputMismatchException;
 import java.util.Map;
 public class Main {
     public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
         Map<String, String> facultyMap = new HashMap<>();
         Map<String, String> majorMap = new HashMap<>();
         facultyMap.put("FEB", "A");
@@ -22,42 +25,35 @@ public class Main {
         majorMap.put("Ilmu Komputer", "07");
         majorMap.put("Aktuaria", "08");
 
-
-        Student student1 = new Student();
-        Student student2 = new Student();
-        Student student3 = new Student();
-
-        student1.setFirstName("Muhammad");
-        student1.setLastName("Alif Setya pRaKasa");
-        student1.setRegisterYear(2019);
-        student1.setFaculty("MIPA");
-        student1.setDepartment("Matematika");
-        student1.setMajor("Ilmu Komputer");
-        student1.setId(facultyMap, majorMap);
-        student1.setEmail(facultyMap);
-
-        student2.setFirstName("KENNEDY");
-        student2.setLastName("");
-        student2.setRegisterYear(2017);
-        student2.setFaculty("MIPA");
-        student2.setDepartment("Matematika");
-        student2.setMajor("Ilmu Komputer");
-        student2.setId(facultyMap, majorMap);
-        student2.setEmail(facultyMap);
-
-        student3.setFirstName("Khawaritzmi");
-        student3.setLastName("abdallah ahmad");
-        student3.setRegisterYear(2017);
-        student3.setFaculty("MIPA");
-        student3.setDepartment("Matematika");
-        student3.setMajor("Ilmu Komputer");
-        student3.setId(facultyMap, majorMap);
-        student3.setEmail(facultyMap);
-
-        student1.description();
-        student2.description();
-        student3.description();
-
+        boolean repeat = false;
+        do{
+            Student student = new Student();
+            System.out.print("First Name    : ");
+            student.setFirstName(inp.nextLine());
+            System.out.print("Last Name     : ");
+            student.setLastName(inp.nextLine());
+            System.out.print("Registry Year : ");
+            try{
+                student.setRegisterYear(inp.nextInt());
+            }catch (InputMismatchException ie){
+            }
+            inp.nextLine();
+            System.out.print("Faculty       : ");
+            student.setFaculty(inp.nextLine());
+            System.out.print("Department    : ");
+            student.setDepartment(inp.nextLine());
+            System.out.print("Major         : ");
+            student.setMajor(inp.nextLine());
+            student.setId(facultyMap, majorMap);
+            student.setEmail(facultyMap);
+            student.description();
+            System.out.println("Do you want to input again y/n");
+            String input = inp.next();
+            inp.nextLine();
+            if(input.equalsIgnoreCase("Y")){
+                repeat=true;
+            }
+        }while(repeat==true);
     }
 }
 
