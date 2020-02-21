@@ -61,7 +61,6 @@ class Student{
         String registerCode = String.valueOf(registerYear).substring(2, 4);
         String randomCode = String.format("%03d",random.nextInt(60)+1);
         id = String.format("%s%s1%s1%s",facultyCode,majorCode,registerCode,randomCode);
-        throw new IllegalArgumentException();
     }
 
     public void setEmail(Map<String,String> facultyMap){
@@ -71,7 +70,7 @@ class Student{
         String emailName = nameArray[nameArray.length-1].toLowerCase();
         String emailName2 = "";
         
-        for(int i=0; i<nameArray.length-1;i++){
+        for(int i = 0; i < nameArray.length-1;i++){
             emailName2 += nameArray[i].toString().charAt(0);
         }
 
@@ -85,8 +84,8 @@ class Student{
         if(firstName==null){
             firstName="";
         }
-        if(lastName==null){
-            lastName="";
+        if(lastName == null){
+            lastName = "";
         }
         
         String fullName = (firstName+" "+lastName).toLowerCase();
@@ -97,7 +96,7 @@ class Student{
             char nameChar[] = nameSequence.toCharArray();
             nameChar[0] = (char)(nameChar[0]-'a'+'A');
             String newName = new String(nameChar);
-            realName+=newName+" ";
+            realName += newName+" ";
         }
         return realName;
     }
