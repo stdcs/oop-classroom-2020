@@ -71,19 +71,6 @@ public class Student {
                 setFullName += toSplit[i].toUpperCase().charAt(0) + toSplit[i].substring(1, toSplit[i].length()) + " ";
             }
         }
-            /*if (lastName.equals("")) {
-                getFullName = toSplit[0].toUpperCase().charAt(0) + toSplit[0].substring(1, toSplit[0].length());
-            } 
-            else if(lastNameToSplit.length == 1){
-                getFullName = toSplit[0].toUpperCase().charAt(0) + toSplit[0].substring(1, toSplit[0].length()) + " " + 
-                toSplit[1].toUpperCase().charAt(0) + toSplit[1].substring(1, toSplit[1].length());
-                
-            }
-            else{
-               getFullName = toSplit[0].toUpperCase().charAt(0) + toSplit[0].substring(1, toSplit[0].length()) + " " + 
-                lastNameToSplit[0].toUpperCase().charAt(0) + lastNameToSplit[0].substring(1, lastNameToSplit[0].length()) + " "  +
-                lastNameToSplit[1].toUpperCase().charAt(0) + lastNameToSplit[1].substring(1, lastNameToSplit[1].length()); 
-            }*/
 
         return setFullName;
     }
