@@ -1,6 +1,6 @@
-public class App {
+class App {
     public static void main(String[] args) throws Exception {
-        Login login = new Login();
+        Login login = Login.getInstance();
         login.auth("naim", "Naim");
         login.status();
     }

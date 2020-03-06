@@ -3,13 +3,20 @@ import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class DataSource {
+class DataSource {
+    static DataSource instance = null;
     private HashMap<String, User> userMap = new HashMap<>();
     private HashMap<Integer, UserDetail> userDetailMap = new HashMap<>();
 
-    DataSource() {
+    private DataSource() {
         putUserDetail();
         putUser();
+    }
+
+    static public DataSource getInstance() {
+        if (instance == null)
+            instance = new DataSource();
+        return instance;
     }
 
     private void putUserDetail() {
@@ -22,7 +29,6 @@ public class DataSource {
                 UserDetail userDetail = new UserDetail(Integer.valueOf(sList.get(0)), sList.get(1), sList.get(2),
                         sList.get(3));
                 userDetailMap.put(Integer.valueOf(sList.get(0)), userDetail);
-                // System.out.println(userDetail);
             }
         } catch (IOException e) {
             System.out.println(e.getMessage());

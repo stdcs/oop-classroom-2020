@@ -1,4 +1,4 @@
-public class UserDetail {
+class UserDetail {
     private Integer id;
     private String name;
     private String dateOfBirth;

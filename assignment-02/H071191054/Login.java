@@ -1,18 +1,32 @@
-public class Login {
+import java.util.NoSuchElementException;
+
+class Login {
+    static Login instance = null
     private User user;
     private UserDetail userDetail;
     private DataSource dataSource;
 
-    public void auth(String name, String pass) {
-        dataSource = new DataSource();
-        if ((user = dataSource.getUser(name)) != null) {
+    private Login() {
+
+    }
+
+    static public Login getInstance() {
+        if (instance == null)
+            instance = new Login();
+        return instance;
+    }
+
+    public void auth(String name, String pass) throws NoSuchElementException {
+        dataSource = DataSource.getInstance();
+        try {
+            user = dataSource.getUser(name);
             if (user.getPassword().equals(pass)) {
                 userDetail = user.getUserDetail();
             } else {
-                System.out.println("Wrong password");
+                System.out.println("wrong password");
             }
-        } else {
-            System.out.println("User not found");
+        } catch (Exception e) {
+            throw new NoSuchElementException("user not found: " + name);
         }
     }
 
