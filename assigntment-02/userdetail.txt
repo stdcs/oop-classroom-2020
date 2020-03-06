@@ -1,0 +1,5 @@
+1;Muhammad Fitrah;04-09-1998;fitrahm17h@student.unhas.ac.id
+2;Muhammad Arizki;00-00-0000;arizkim17h@student.unhas.ac.id
+3;Kennedy;00-02-2000;kennedy17h@student.unhas.ac.id
+4;Muhammad Muflihun Naim;00-00-0000;naimmm17h@student.unhas.ac.id
+5;Farhan Ramdhani;00-00-0000;ramdhanif17h@student.unhas.ac.id
