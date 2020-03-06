@@ -27,7 +27,7 @@ class DataSource {
             while ((s = reader.readLine()) != null) {
                 ArrayList<String> sList = new ArrayList<String>(Arrays.asList(s.split(";")));
                 UserDetail userDetail = new UserDetail(Integer.valueOf(sList.get(0)), sList.get(1), sList.get(2),
-                        sList.get(3));
+                        sList.get(3), s, s);
                 userDetailMap.put(Integer.valueOf(sList.get(0)), userDetail);
             }
         } catch (IOException e) {
