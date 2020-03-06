@@ -1,5 +1,0 @@
-1;ftrh;12345678
-2;arzk;qwert
-3;ken;asdf
-4;Naim;naim
-5;farhan;Parhan
