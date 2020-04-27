@@ -55,9 +55,9 @@ public static void main(String[] args) {
 <p align="center">
   <figurer>
     <img src="assets/gif/w-start-method.gif">
-    <figcaption align="center">
-     <p>Output Normal, terdapat jeda 10 detik sebelum selesai</p>
-     <p>Jeda tersebut ditentukan oleh banyaknya peserta</p>
+    <figcaption>
+     <p align="center">Output Normal, terdapat jeda 10 detik sebelum selesai</p>
+     <p align="center">Jeda tersebut ditentukan oleh banyaknya peserta</p>
      </figcaption>
   </figurer>
 </p>
@@ -65,9 +65,9 @@ public static void main(String[] args) {
 <p align="center">
   <figurer>
     <img src="assets/gif/wo-start-method.gif">
-    <figcaption align="center">
-     <p>Output jika method start dari class Runner dipanggil namun method start dari class Race belum dipanggil</p>
-     <p>Tidak ada jeda, program langsung selsesai</p>
+    <figcaption>
+     <p align="center">Output jika method start dari class Runner dipanggil namun method start dari class Race belum dipanggil</p>
+     <p align="center">Tidak ada jeda, program langsung selsesai</p>
      </figcaption>
   </figurer>
 </p>
