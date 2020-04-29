@@ -1,4 +1,5 @@
 # Race Run
+
 <p align="center">
   <img src="assets/img/race-run-uml.png" alt="Class Diagram">
 </p>
@@ -55,21 +56,13 @@ public static void main(String[] args) {
 ## Contoh Output
 
 <p align="center">
-  <figurer>
     <img src="assets/gif/w-start-method.gif">
-    <figcaption>
-     <p align="center">Output Normal, terdapat jeda 10 detik sebelum selesai<br>Jeda tersebut ditentukan oleh banyaknya peserta</p>
-     </figcaption>
-  </figurer>
+     <p align="center"><i>Output Normal, terdapat jeda 10 detik sebelum selesai<br>Jeda tersebut ditentukan oleh banyaknya peserta</i></p>
 </p>
-
+<br>
 <p align="center">
-  <figurer>
     <img src="assets/gif/wo-start-method.gif">
-    <figcaption>
-     <p align="center">Output jika method start dari class Runner dipanggil namun method start dari class Race belum dipanggil<br>Tidak ada jeda, program langsung selsesai</p>
-     </figcaption>
-  </figurer>
+     <p align="center"><i>Output jika method start dari class Runner dipanggil namun method start dari class Race belum dipanggil<br>Tidak ada jeda, program langsung selsesai</i></p>
 </p>
 
 ## Jika penerapan konsep *Thread* telah sesuai, *Runner* tidak akan terurut dan hasil *Race* akan selalu berbeda disetiap *run* program
