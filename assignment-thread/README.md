@@ -23,9 +23,11 @@ Juara 1, 2, dan 3 tidak mungkin berada pada daftar peserta yang kalah begitupula
 - `Race::result()` adalah method yang digunakan oleh `class Race` untuk menampilkan hasi pertandingan.
   - method ini harus dipastikan terpanggil setelah perlombaan selesai.
   - Jika method ini berhasil dipanggil, maka akan muncul pesan "`The race is over.`" diikuti dengan daftar pemenang dan peserta yang kalah.
-- Atribut dari `class Race` silahkan anda tentukan sendiri.
+- Pada `class Race`, tidak ada `reference` ke `class Runner`, sehingga tidak ada objek dari `class Runner` di `class Race`.
+- Atribut dari `class Race` silahkan anda tentukan sendiri, namun tidak ada atribut bertipe `Runner` pada `class` ini.
 - Atribut pada `class Runner` dan `Race` dapat anda tambahkan sesuai kebutuhan.
 - Method pada `class Runner` dan `Race` dapat anda tambahkan sesuai kebutuhan.
+- *Logic* untuk menentukan pemenang dan yang kalah tidak menggunakan metode *sorting*.
 
 ## Contoh main method
 
@@ -56,8 +58,7 @@ public static void main(String[] args) {
   <figurer>
     <img src="assets/gif/w-start-method.gif">
     <figcaption>
-     <p align="center">Output Normal, terdapat jeda 10 detik sebelum selesai</p>
-     <p align="center">Jeda tersebut ditentukan oleh banyaknya peserta</p>
+     <p align="center">Output Normal, terdapat jeda 10 detik sebelum selesai<br>Jeda tersebut ditentukan oleh banyaknya peserta</p>
      </figcaption>
   </figurer>
 </p>
@@ -66,8 +67,9 @@ public static void main(String[] args) {
   <figurer>
     <img src="assets/gif/wo-start-method.gif">
     <figcaption>
-     <p align="center">Output jika method start dari class Runner dipanggil namun method start dari class Race belum dipanggil</p>
-     <p align="center">Tidak ada jeda, program langsung selsesai</p>
+     <p align="center">Output jika method start dari class Runner dipanggil namun method start dari class Race belum dipanggil<br>Tidak ada jeda, program langsung selsesai</p>
      </figcaption>
   </figurer>
 </p>
+
+## Jika penerapan konsep *Thread* telah sesuai, *Runner* tidak akan terurut dan hasil *Race* akan selalu berbeda disetiap *run* program
