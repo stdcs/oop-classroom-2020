@@ -4,13 +4,13 @@
   <img src="assets/img/race-run-uml.png" alt="Class Diagram">
 </p>
 
-Berdasarkan kelas diagram diatas, buatlah sebuah program yang mensimulasikan perlombaan lari.  
-Didalam perlombaan ini, terdapat 3 pemenang, yaitu juara 1, 2, dan 3, sehingga membutuhkan minimal 3 peserta.  
-Jika juara 1, 2, dan 3 telah ditentukan, maka peserta lainnya dinyatakan kalah.  
-Juara 1, 2, dan 3 tidak mungkin peserta yang sama.  
-Juara 1, 2, dan 3 tidak mungkin berada pada daftar peserta yang kalah begitupula sebaliknya.  
+Berdasarkan kelas diagram diatas, buatlah sebuah program yang mensimulasikan perlombaan lari.
+Didalam perlombaan ini, terdapat 3 pemenang, yaitu juara 1, 2, dan 3, sehingga membutuhkan minimal 3 peserta.
+Jika juara 1, 2, dan 3 telah ditentukan, maka peserta lainnya dinyatakan kalah.
+Juara 1, 2, dan 3 tidak mungkin peserta yang sama.
+Juara 1, 2, dan 3 tidak mungkin berada pada daftar peserta yang kalah begitupula sebaliknya.
 
-## Berikut Penjelasan dari Class Diagram diatas
+## Berikut **Penjelasan** dari Class Diagram diatas
 
 - `Runner::joinRace(Race race)` adalah method yang digunakan oleh `class Runner` untuk mengikuti sebuah pertandingan.
   - Setiap `Runner` yang mengikuti sebuah `Race` akan mengakibatkan durasi `Race` bertambah 1 detik.
@@ -18,6 +18,7 @@ Juara 1, 2, dan 3 tidak mungkin berada pada daftar peserta yang kalah begitupula
   - Jika `Runner` belum mengikuti `Race`, maka akan muncul pesan "`Runner-%d have not entered any race`", dimana `%d` adalah nomor `Runner`.
   - Jika `Runner` telah mengikuti `Race`, namun `Race` yang diikuiti belum dimulai, maka akan muncul pesan "`Hey Runner-%d, the race hasn't started yet`".
   - Jika salah satu pesan diatas muncul, berarti `Runner` yang dimaksud tidak mengikuti `Race`.
+  - Jika Runner memanggil method `joinRace` namun tidak memanggil method `start`, maka Runner secara otomatis kalah dan masuk kedalam daftar pemain yang kalah.
 - `Race::start()` adalah method yang digunakan oleh `class Race` untuk menandakan bahwa perlombaan telah dimulai.
   - Jika method `start` dipanggil, maka akan muncul pesan "`The race starts . . .`".
   - Jika method `start` dipanggil, namun jumlah peserta belum mencukupi, maka akan mucul pesan "`The race cannot be started, runners are not enough`" dan perlombaan tidak dimulai.
