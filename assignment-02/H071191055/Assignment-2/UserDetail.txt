@@ -1,0 +1,10 @@
+// file UserDetail.txt
+1;Muhammad Fitrah;04-09-1998;fitrahm17h@student.unhas.ac.id
+2;Muhammad Arizki;00-00-0000;arizkim17h@student.unhas.ac.id
+3;Kennedy;00-02-2000;kennedy17h@student.unhas.ac.id
+4;Muhammad Muflihun Naim;00-00-0000;naimmm17h@student.unhas.ac.id
+5;Farhan Ramdhani;00-00-0000;ramdhanif17h@student.unhas.ac.id
+6;Rafli Fathur Rachman;22-07-2001;rachmanrf19h@student.unhas.ac.id
+7;Rafly Ramdhani Putra;01-12-2000;putrarr19h@student.unhas.ac.id
+8;Silverius Sony Lembang;19-06-2001;lembangss19h@student.unhas.ac.id
+9;Richard Enrico Sulieanto;02-04-2001;sulieantore19h@student.ac.id
